@@ -1,0 +1,10 @@
+*~
+build/
+bin/
+images/
+*.o
+*.so
+*MakeFiles/
+*CMakeCache.txt
+*.cproject
+*.txt.user

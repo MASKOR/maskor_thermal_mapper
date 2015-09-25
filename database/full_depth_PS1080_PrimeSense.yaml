@@ -1,0 +1,17 @@
+%YAML:1.0
+image_width: 640
+image_height: 480
+camera_name: /camera/ir
+camera_matrix: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 5.5817709501566389e+02, 0., 3.4958090450636547e+02, 0.,
+       5.5987260955820852e+02, 2.5041204903240893e+02, 0., 0., 1. ]
+distortion_coefficients: !!opencv-matrix
+   rows: 1
+   cols: 5
+   dt: d
+   data: [ -1.1848078811745133e-01, 4.3556921019716344e-01,
+       2.8337561870886113e-03, 8.4717502133701359e-03,
+       -6.0500258157846243e-01 ]

@@ -1,0 +1,1 @@
+rosbag record -o mapping.bag /rtabmap/mapData /voxel_cloud /camera/rgb/image_raw /tf /rtabmap/odom /rtabmap/odom_info /odom_sync /initialpose /camera/rgb/camera_info /camera/depth_registered/camera_info /camera/depth/camera_info /camera/depth/image_raw /data_odom_sync/camera_info /data_odom_sync/depth /data_odom_sync/image /rtabmap/info /rtabmap/cloud_map /tf_static

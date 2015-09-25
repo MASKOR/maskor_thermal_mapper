@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<!--
+YOU NEED A BAGFILE FIRST! (SEE /commands/rosbag_record_command.txt)
+
+Launch file for 3D thermal mapping demonstration.
+For possible coloring in postprocessing set "enable_colormap" to "false".
+-->
+
+<launch>
+ 
+ <node pkg="rosbag" type="play" name="rosbag" args="[PATH TO BAGFILE (SEE /commands/rosbag_record_command.txt)].bag"/> 
+
+ <!-- launch mapping node-->
+ <node 
+     name="maskor_thermal_mapper_node"
+     pkg="maskor_thermal_mapper" 
+     type="maskor_thermal_mapper_node" 
+     respawn="false" 
+     launch-prefix="gnome-terminal -e">
+     <param name="package_name" value="maskor_thermal_mapper"/>
+     <param name="database_path" value="/database"/>
+     <param name="yaml_path" value="/full_flir_ir_stereo_calib.yaml"/>
+     <param name="publish_topic" value="flir_camera/mapped/image"/>
+     <param name="enable_colormap" value="true"/>
+ </node>
+
+ <include file="$(find rtabmap_ros)/launch/rgbd_mapping.launch" >
+     <arg name="rviz" value="true" /> 
+     <arg name="rtabmapviz" value="false" /> 
+ </include>
+
+</launch>

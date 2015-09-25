@@ -1,0 +1,10 @@
+
+roscore
+
+roslaunch openni2_launch openni2.launch depth_registration:=true
+
+rosrun maskor_gige_cam maskor_flir_cam_node
+
+rosrun maskor_thermal_mapper maskor_thermal_mapper_node
+
+roslaunch rtabmap_ros rgbd_mapping.launch rviz:=true rtabmapviz:=false
