@@ -1,7 +1,7 @@
 # maskor_thermal_mapper
 registeres thermal data with asus xtion depth image
 
-How to install:
+How to install / use with rtabmap for thermal 3D mapping:
 
 - install openni2 for ASUS Xtion
 
@@ -15,4 +15,6 @@ if you want to use a FLIRA325sc for example
 - clone  maskor/maskor_thermal_mapper to ~/catkin_ws/src 
 
 - run the INSTALL.sh in ~/catkin_ws/src/maskor_thermal_mapper
+
+- launch the maskor_thermal_mapper.launch launchfile to generate thermal 3D maps
 
